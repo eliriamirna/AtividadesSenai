@@ -10,11 +10,12 @@ bairro varchar(50) not null,
 cidade varchar(50) not null,
 UF char(2) not null,
 email varchar(100) not null,
-telefone bigint(14) not null,
+telefone varchar(14) not null,
 senha varchar(20) not null
 );
 
 create table pagamento(
+idpagamento int auto_increment primary key,
 nomeCartao varchar(100) not null,
 numCartao varchar(16) not null,
 bandeira varchar(50) not null,
@@ -23,6 +24,7 @@ codSeguranca varchar(3)
 );
 
 create table dadosPessoais(
+idDadosPessoais int auto_increment primary key,
 nome varchar(100) not null,
 cpf varchar(11) not null,
 peso decimal(5,2) not null,
@@ -34,6 +36,7 @@ limitacoes varchar(250) not null
 );
 
 create table treino(
+idtreino int auto_increment primary key,
 nome varchar(100) not null,
 cpf varchar(11) not null,
 inicio date not null,
